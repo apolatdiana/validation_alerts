@@ -10,95 +10,29 @@
   <body>
     <div class="container" style="margin: 20px solid">
       <form class="needs-validation" action="submit"  method="POST" style="border: 2px solid grey; margin:30px" name="testRegForm" onsubmit="return testForm(event);">
-        <div class="form-row">
-          <div class="col-md-5">
-            <img src="pictures/uganda-flag-part.png" alt="" style="height: 100px;">
-          </div>
-          <div class="col-md-3">
-            <img src="pictures/uganda-coat_of_arms.png" alt="" style="height: 100px;">
-          </div>
-          <div class="col-md-4">
-            <img src="pictures/uganda-flag-part.png" alt="" style="height: 100px;">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-12">
-            <h4 class="text-center">Ministry of Health</h4>
-            <h1 class="b text-center">Covid-19(Corrona Virus)</h1>
-            <h5 class="text-center">Virus testing Form</h5>
-          </div>
-        </div>
-        <br>
-        <span id="regmessage" class="p-3 mb-12 bg-success text-white text-center"></span>
-        <div class="p-3 mb-12 bg-success text-white text-center">
-          <span id="regmessage"></span>
-        </div>
-        <div class="form-row">
-          <div class="col-md-5 mb-3 ml-2">
-            <label for="validationCustom01">Surname</label>
-            <input id="validationCustom01" class="form-control" type="text" name="surname">
-            <span id="surnameerror"></span>
-            <div class="valid-feedback"></div>
-          </div>
-          <div class="col-md-5 mb-3 mr-1">
-            <label for="validationCustom02">Given name</label>
-            <input id="validationCustom02" class="form-control" type="text" name="givenName">
-            <span id="givenNameerror"></span>
-            <div class="valid-feedback"></div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-5 mb-3 ml-2">
-            <label for="validationCustom01">Date of Birth</label>
-            <input id="validationCustom01" class="form-control" type="date" name="dateOfDirth">
-            <span id="dateOfBirtherror"></span>
-            <div class="valid-feedback"></div>
-          </div>
-          <div class="col-md-5 mb-3 mr-1">
-            <label for="validationCustom02">Place of residence</label>
-            <input id="validationCustom02" class="form-control" type="text" name="placeOfResidence">
-            <span id="residenceerror" style="background-color:green"></span>
-            <div class="valid-feedback"></div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-5 mb-3 ml-2">
-            <label for="validationCustom01">Occupation</label>
-            <input id="validationCustom01" class="form-control" type="text" name="occupation">
-            <span id="occupationerror"></span>
-            <div class="valid-feedback"></div>
-          </div>
-          <div class="col-md-5 mb-3 mr-1">
-            <label for="validationCustom02">Nationality</label>
-            <input id="validationCustom02" class="form-control" type="text" name="nationality">
-            <span id="nationalityerror"></span>
-            <div class="valid-feedback"></div>
-          </div>
-        </div>
-        <div class="col-md-10 mr-1">
-          <label for="validationCustom02">Gender</label>
-          <hr>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gender" value="female" checked id="female">
-            <span class="form-check-label">Female</span>
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gender" value="male" checked id="male">
-            <span class="form-check-label" style="float:right">Male</span>
-            <span id="gendererror"></span>
-          </label>
-        </div>
-        <div class="col-md-11 mb-3 mr-1">
-          <select class="form-control" name="category" id="category">
-            <option value="type">--Select Category--</option>
-            <option value="returnee">Returnee</option>
-            <option value="contact">Contact</option>
-            <option value="alert">Alert</option>
-            <option value="volunteer">Volunteer</option>
+          <!-- Form inputs go here -->
+          <input type="text" name="surname" placeholder="Surname">
+          <div id="surnameerror"></div>
+          <input type="text" name="givenName" placeholder="Given Name">
+          <div id="givenNameerror"></div>
+          <input type="date" name="dateOfBirth" placeholder="Date of Birth">
+          <div id="dateOfBirthError"></div>
+          <input type="text" name="placeOfResidence" placeholder="Place of Residence">
+          <div id="residenceerror"></div>
+          <input type="text" name="occupation" placeholder="Occupation">
+          <div id="occupationerror"></div>
+          <input type="text" name="nationality" placeholder="Nationality">
+          <div id="nationalityerror"></div>
+          <input type="radio" id="female" name="gender" value="female"> Female
+          <input type="radio" id="male" name="gender" value="male"> Male
+          <div id="gendererror"></div>
+          <select id="category" name="category">
+              <option value="type">Select Category</option>
+              <!-- Add your options here -->
           </select>
-          <span id="categoryerror"></span>
-        </div>
-        <button class="btn btn-primary" type="submit" style="float:right">Register</button>
+          <div id="categoryerror"></div>
+          <button type="submit">Submit</button>
+          <div id="regmessage"></div>
       </form>
     </div>
     <script src="/index1.js"></script>
